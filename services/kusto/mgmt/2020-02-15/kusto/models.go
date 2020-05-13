@@ -20,11 +20,12 @@ package kusto
 import (
 	"context"
 	"encoding/json"
+	"net/http"
+
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/Azure/go-autorest/autorest/to"
 	"github.com/Azure/go-autorest/tracing"
-	"net/http"
 )
 
 // The package's fully qualified name.
@@ -3129,7 +3130,7 @@ type ReadWriteDatabaseProperties struct {
 	// Statistics - The statistics of the database.
 	Statistics *DatabaseStatistics `json:"statistics,omitempty"`
 	// IsFollowed - READ-ONLY; Indicates whether the database is followed.
-	IsFollowed *string `json:"isFollowed,omitempty"`
+	IsFollowed *bool `json:"isFollowed,omitempty"`
 }
 
 // Resource ...
